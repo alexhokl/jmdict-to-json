@@ -52,5 +52,7 @@ Run `task lint` and `task test` before considering a change done.
   is MIT). Keep the attribution in the README, the root command's help text and
   the bucket's `LICENSE.txt` in `cluster`, and keep the job's update schedule at
   least monthly, as the licence requires regular updates.
+- Keep the agent skill `skills/jmdict-to-json/SKILL.md` in sync when commands,
+  flags, defaults or the JSON format change.
 - Releases: `task tag` then push the tag; Cloud Build tests, builds and pushes
   the image. The image tag of the job is bumped by hand in `cluster`.

@@ -50,3 +50,10 @@ tasks:
         NEW_TAG="0.1.$((PATCH + 1))"
         git tag "$NEW_TAG"
         echo "Created tag $NEW_TAG"
+
+  install-skill:
+    desc: Install the skill to the local system
+    cmds:
+      - mkdir -p ~/.agents/skills ~/.claude/skills
+      - ln -snf "{{.TASKFILE_DIR}}/skills/jmdict-to-json" ~/.agents/skills/jmdict-to-json
+      - ln -snf "{{.TASKFILE_DIR}}/skills/jmdict-to-json" ~/.claude/skills/jmdict-to-json

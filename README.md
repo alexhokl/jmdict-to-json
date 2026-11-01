@@ -80,6 +80,13 @@ Every XML element is kept, under camelCase names. Empty fields are omitted.
 | `sense[].gloss[]`                     | `gloss` (`lang`, `gender`, `type`, `text`, `priority`) |
 | `sense[].example[]`                   | `example` (only in `JMdict_e_examp`)        |
 
+## Agent skill
+
+[`skills/jmdict-to-json/`](skills/jmdict-to-json) is an Agent Skill that
+teaches a coding agent to drive the `jmdict-to-json` CLI and query its JSON.
+Install it into `~/.agents/skills` and `~/.claude/skills` with
+`task install-skill`.
+
 ## Data licence and attribution
 
 This package uses the
