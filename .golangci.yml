@@ -1,0 +1,52 @@
+version: "2"
+
+run:
+  timeout: 5m
+
+linters:
+  default: standard
+  enable:
+    - bodyclose
+    - copyloopvar
+    - errorlint
+    - gocritic
+    - misspell
+    - nilerr
+    - noctx
+    - revive
+    - unconvert
+    - unparam
+    - whitespace
+
+  settings:
+    errcheck:
+      # Failing to write to stdout is not something a CLI can meaningfully
+      # recover from, and checking every Fprintln would drown the code.
+      exclude-functions:
+        - fmt.Fprintf
+        - fmt.Fprintln
+    govet:
+      # The shadow check is deliberately left off: it fires on the idiomatic
+      # `if err := f(); err != nil` form and on closures that legitimately
+      # rebind err, which is noise rather than a defect class worth chasing.
+      enable-all: false
+
+  exclusions:
+    generated: lax
+    rules:
+      # Table-driven tests legitimately repeat themselves and use long
+      # literals; the style linters add nothing there.
+      - path: _test\.go$
+        linters:
+          - dupl
+          - gocritic
+          - unparam
+
+formatters:
+  enable:
+    - gofmt
+    - goimports
+  settings:
+    goimports:
+      local-prefixes:
+        - github.com/alexhokl/jmdict-to-json

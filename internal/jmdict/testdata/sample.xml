@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE JMdict [
+<!ELEMENT JMdict (entry*)>
+<!-- comment with <angle> brackets & an "ENTITY" mention -->
+<!ELEMENT entry (ent_seq, k_ele*, r_ele+, sense+)>
+<!ATTLIST gloss xml:lang CDATA "eng">
+<!ENTITY ateji "ateji (phonetic) reading">
+<!ENTITY adj-na "adjectival nouns or quasi-adjectives (keiyodoshi)">
+<!ENTITY n "noun (common) (futsuumeishi)">
+<!ENTITY uk "word usually written using kana alone">
+<!ENTITY ksb 'Kansai-ben'>
+]>
+<!-- JMdict created: 2026-11-01 -->
+<JMdict>
+<entry>
+<ent_seq>1000220</ent_seq>
+<k_ele>
+<keb>明白</keb>
+<ke_inf>&ateji;</ke_inf>
+<ke_pri>ichi1</ke_pri>
+<ke_pri>news1</ke_pri>
+</k_ele>
+<r_ele>
+<reb>めいはく</reb>
+<re_pri>ichi1</re_pri>
+</r_ele>
+<sense>
+<pos>&adj-na;</pos>
+<gloss>obvious</gloss>
+<gloss g_type="lit">clear &amp; plain</gloss>
+</sense>
+<sense>
+<pos>&n;</pos>
+<misc>&uk;</misc>
+<dial>&ksb;</dial>
+<lsource xml:lang="por" ls_type="part" ls_wasei="y">espada</lsource>
+<lsource/>
+<gloss xml:lang="ger" g_gend="fem">Klarheit</gloss>
+</sense>
+</entry>
+<entry>
+<ent_seq>2000010</ent_seq>
+<r_ele>
+<reb>ワイシャツ</reb>
+<re_nokanji/>
+<re_restr>白</re_restr>
+</r_ele>
+<sense>
+<stagr>ワイシャツ</stagr>
+<xref>シャツ・1</xref>
+<gloss>shirt</gloss>
+<example>
+<ex_srce exsrc_type="tat">12345</ex_srce>
+<ex_text>ワイシャツ</ex_text>
+<ex_sent xml:lang="jpn">ワイシャツを着る。</ex_sent>
+<ex_sent>I wear a shirt.</ex_sent>
+</example>
+</sense>
+</entry>
+</JMdict>

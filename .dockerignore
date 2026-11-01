@@ -1,0 +1,7 @@
+.git
+jmdict-to-json
+*.gz
+*.xml
+*.json
+*.jsonl
+coverage.out

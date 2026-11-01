@@ -31,3 +31,10 @@ go.work.sum
 # Editor/IDE
 # .idea/
 # .vscode/
+
+# Build output and dictionary files
+/jmdict-to-json
+jmdict.gz
+jmdict.xml
+jmdict.json
+*.jsonl
